@@ -1,5 +1,6 @@
 (function ($) {
     
+    // toggle menu
     wrapper = $('body');
     el = wrapper.find('.mobile'); 
     act = el.children().children();
@@ -17,7 +18,7 @@
     });
    
    
-    var target = document.getElementsByTagName('body');
+    // check for mobile
     var check = {any:function(){
        return navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
     }};
@@ -25,7 +26,7 @@
         $('nav').css('position', 'relative');
     };
 
-   
+    // scroll menu for desktop
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
     $('body').bind(mousewheelevt, function(e){
 
@@ -42,8 +43,8 @@
     });
 
 
-    // detect upward downward swipe
-    function addSwipeListener(el, listener){
+    // swipe menu for mobile 
+    function SwipeListener(el, listener){
         var startY;
         var distance;
         var direction;
@@ -70,6 +71,6 @@
         el.addEventListener('touchstart', onTouchStart, false);
     };
 
-    addSwipeListener(document.body);
+    SwipeListener(document.body);
     
 })(jQuery);
