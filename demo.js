@@ -65,6 +65,7 @@
             }
             if (Math.abs(distance) > 15) {
                 c = 10;
+                // + upward + : + downward +
                 listener({ target: el, direction: distance > 0 ? '' + $('#nav').addClass('m_open') + '' : '' + $('#nav').removeClass('m_open') + '' });
             }
         };
