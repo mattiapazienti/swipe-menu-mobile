@@ -18,7 +18,7 @@
     });
    
    
-    // check for mobile
+    // check for touch devices
     var check = {any:function(){
        return navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
     }};
@@ -43,7 +43,7 @@
     });
 
 
-    // swipe menu for mobile 
+    // swipe menu for mobile (this repo)
     function SwipeListener(el, listener){
         var startY;
         var distance;
